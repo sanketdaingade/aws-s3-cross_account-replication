@@ -12,16 +12,16 @@ This project demonstrates the implementation of Amazon S3 Cross-Account Replicat
 ## Architecture
 * Source account (Account A)
   * Region: Mumbai `ap-south-1.`
-  * Bucket: source-replica07 (general purpose, versioning enabled).
+  * Bucket: `source-replica07` (general purpose, versioning enabled).
   * S3 replication rule configured on this bucket. 
 
 * Destination account (Account B)
-  * Region:  Mumbai ap-south-1 (same as source).
-  * Bucket: destination-replica007 (general purpose, versioning enabled).
+  * Region:  Mumbai `ap-south-1` (same as source).
+  * Bucket: `destination-replica007` (general purpose, versioning enabled).
   * Bucket policy granting the replication role permissions to replicate objects.
 
 * IAM service role
-  * Automatically created by S3 when the replication rule is saved, with a name like s3crr_role_for_source-replica07_3.
+  * Automatically created by S3 when the replication rule is saved, with a name like `s3crr_role_for_source-replica07_3`.
   * Trusted by S3 and allowed to read objects from the source bucket and write replicas into the destination bucket.
   
 ## Skills and concepts demonstrated
@@ -34,3 +34,15 @@ This project demonstrates the implementation of Amazon S3 Cross-Account Replicat
 * Two AWS accounts (Account A as source, Account B as destination).
 * Permission to create S3 buckets and configure replication in both accounts.
 * Basic understanding of S3 versioning, IAM roles, and bucket policies.
+
+## Step-by-step implementation
+**1. Create the source bucket (Account A)**
+1.Sign in to the AWS Management Console using Account A and open **Amazon S3.**
+2.Click **Create bucket** and choose:
+  * Bucket type: **General purpose.**
+  * Region: **Mumbai ap-south-1.**
+  * Bucket name: for example, `source-replica07` (must be globally unique).
+3.Leave **Block Public Access** enabled.
+4.Scroll down, enable **Bucket Versioning**, and create the bucket.
+
+At this point, Account A has a versioned bucket `source-replica07` that will act as the replication source.
