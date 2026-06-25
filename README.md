@@ -11,15 +11,15 @@ This project demonstrates the implementation of Amazon S3 Cross-Account Replicat
 
 ## Architecture
 * Source account (Account A)
-Region: Mumbai ap-south-1.
-Bucket: source-replica07 (general purpose, versioning enabled).
-S3 replication rule configured on this bucket. 
+  * Region: Mumbai ap-south-1.
+  * Bucket: source-replica07 (general purpose, versioning enabled).
+  * S3 replication rule configured on this bucket. 
 
 * Destination account (Account B)
-Region:  Mumbai ap-south-1 (same as source).
-Bucket: destination-replica007 (general purpose, versioning enabled).
-Bucket policy granting the replication role permissions to replicate objects.
+  * Region:  Mumbai ap-south-1 (same as source).
+  * Bucket: destination-replica007 (general purpose, versioning enabled).
+  * Bucket policy granting the replication role permissions to replicate objects.
 
 * IAM service role
-Automatically created by S3 when the replication rule is saved, with a name like s3crr_role_for_source-replica07_3.
-Trusted by S3 and allowed to read objects from the source bucket and write replicas into the destination bucket.
+  * Automatically created by S3 when the replication rule is saved, with a name like s3crr_role_for_source-replica07_3.
+  * Trusted by S3 and allowed to read objects from the source bucket and write replicas into the destination bucket.
