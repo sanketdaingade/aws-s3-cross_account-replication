@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReplicationPermissions",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::018571635611:role/service-role/s3crr_role_for_source-replica07_3"
+      },
+      "Action": [
+        "s3:ReplicateObject",
+        "s3:ReplicateDelete"
+      ],
+      "Resource": "arn:aws:s3:::destination-replica007/*"
+    }
+  ]
+}
