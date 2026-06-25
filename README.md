@@ -1,3 +1,10 @@
 # aws-s3-cross_account-replication
 ## Overview
 This project demonstrates the implementation of Amazon S3 Cross-Account Replication (CRR) using the AWS Management Console. The setup includes creating and configuring versioning on both source and destination S3 buckets, establishing a replication rule with the required IAM service role, and configuring a destination bucket policy to securely permit replication from a separate AWS account. This solution ensures automated, secure, and reliable replication of objects across AWS accounts for improved data redundancy, compliance, and disaster recovery.
+
+## Project Goals
+* Implement Amazon S3 Cross-Account Replication (CRR) to automatically replicate objects from a source S3 bucket in Account A to a destination S3 bucket in Account B.
+* Enable bucket versioning on both source and destination buckets, which is a mandatory requirement for S3 replication.
+* Configure an AWS Identity and Access Management (IAM) service role that Amazon S3 uses to securely read objects from the source bucket and replicate them to the destination bucket.
+* Apply a destination bucket policy that grants the replication role the necessary permissions to perform replication-related S3 actions.
+* Ensure secure, automated, and reliable data replication across AWS accounts to support data redundancy, backup, and disaster recovery requirements.
