@@ -39,9 +39,9 @@ This project demonstrates the implementation of Amazon S3 Cross-Account Replicat
 **1. Create the source bucket (Account A)**
 1. Sign in to the AWS Management Console using Account A and open **Amazon S3.**
 2. Click **Create bucket** and choose:
-  * Bucket type: **General purpose.**
-  * Region: **Mumbai ap-south-1.**
-  * Bucket name: for example, `source-replica07` (must be globally unique).
+   * Bucket type: **General purpose.**
+   * Region: **Mumbai ap-south-1.**
+   * Bucket name: for example, `source-replica07` (must be globally unique).
 4. Leave **Block Public Access** enabled.
 5. Scroll down, enable **Bucket Versioning**, and create the bucket.
 
