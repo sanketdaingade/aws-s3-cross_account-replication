@@ -42,7 +42,7 @@ This project demonstrates the implementation of Amazon S3 Cross-Account Replicat
   * Bucket type: **General purpose.**
   * Region: **Mumbai ap-south-1.**
   * Bucket name: for example, `source-replica07` (must be globally unique).
-3. Leave **Block Public Access** enabled.
-4. Scroll down, enable **Bucket Versioning**, and create the bucket.
+4. Leave **Block Public Access** enabled.
+5. Scroll down, enable **Bucket Versioning**, and create the bucket.
 
 At this point, Account A has a versioned bucket `source-replica07` that will act as the replication source.
